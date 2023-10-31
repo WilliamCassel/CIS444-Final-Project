@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+        }
+        #toolbar {
+            width: 12%;
+            padding: 20px;
+            background-color: #585252;
+        }
+        #image-container {
+            width: 80%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .image {
+            width: 50%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        img{
+            width: 20vw;
+            height: auto;
+            display: block;
+        }
+        button{
+            width:150px; 
+            height:45px; 
+            border-color:#1186bd;
+            border-radius:10%;
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; 
+            background-color:#1186bd; 
+            font-size:20px;
+            font-family: 'Space Mono', monospace; 
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <div id="toolbar">
+        <h2>Filter</h2>
+        <button onclick="filterImages('all')">All</button>
+        <br>
+        <button onclick="filterImages('nature')">Nature</button> <br>
+        <button onclick="filterImages('animals')">Animals</button> <br>
+        <button onclick="filterImages('cities')">Cities</button> <br>
+    </div>
+    <div id="image-container">
+        <div class="image nature">
+            <img src="Inferno.webp" alt="Nature 1">
+        </div>
+        <div class="image animals">
+            <img src="Nuke.webp" alt="Animals 1">
+        </div>
+        <div class="image cities">
+            <img src="vertigo.webp" alt="Cities 1">
+        </div>
+        <div class="image nature">
+            <img src="Office.webp" alt="Nature 2">
+        </div>
+        <div class="image animals">
+            <img src="Ancient.webp" alt="Animals 2">
+        </div>
+        <div class="image cities">
+            <img src="Anubis.webp" alt="Cities 2">
+        </div>
+        <!-- Add more images as needed -->
+    </div>
+    <script>
+        function filterImages(category) {
+            const images = document.querySelectorAll('.image');
+            images.forEach(image => {
+                if (category === 'all' || image.classList.contains(category)) {
+                    image.style.display = 'block';
+                } else {
+                    image.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
