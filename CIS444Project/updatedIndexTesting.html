@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+        }
+        #toolbar {
+            width: 12%;
+            padding: 20px;
+            background-color: rgb(83, 80, 80);
+            margin-right:5%;
+        }
+        #image-container {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribute space between items */
+}
+
+.image {
+    width: calc(50% - 10px); /* 50% width with 10px padding between images */
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: rgb(83, 80, 80);
+    border: 20px solid #12012e;
+    border-radius: 20px;
+    margin-bottom: 5%;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%; /* Ensure images scale within their containers */
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .image {
+        width: 100%; /* On smaller screens, make images take up the full row width */
+        margin-right: 0; /* Remove right margin to prevent overflow */
+    }
+}
+        button{
+            width:150px; 
+            height:45px; 
+            border-color:#1186bd;
+            border-radius:10%;
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; 
+            background-color:#1186bd; 
+            font-size:20px;
+            font-family: 'Space Mono', monospace; 
+            color:white;
+        }
+    </style>
+</head>
+<body style="background-color: rgb(83, 80, 80);">
+    <div id="toolbar">
+        <h2>Filter</h2>
+        <button onclick="filterImages('all')">All</button>
+        <br>
+        <button onclick="filterImages('T')">T</button> <br>
+        <button onclick="filterImages('CT')">CT</button> <br>
+    </div>
+    <div id="image-container">
+        <div class="image T">
+            <img src="Inferno.webp" alt="T 1">
+        </div>
+        <div class="image T">
+            <img src="Nuke.webp" alt="T 2">
+        </div>
+        <div class="image T">
+            <img src="vertigo.webp" alt="T 3">
+        </div>
+        <div class="image CT">
+            <img src="Office.webp" alt="CT 1">
+        </div>
+        <div class="image CT">
+            <img src="Ancient.webp" alt="CT 2">
+        </div>
+        <div class="image CT">
+            <img src="Anubis.webp" alt="CT 3">
+        </div>
+    </div>
+    <script>
+        function filterImages(category) {
+            const images = document.querySelectorAll('.image');
+            images.forEach(image => {
+                if (category == 'all' || image.classList.contains(category)) {
+                    image.style.display = 'block';
+                } else {
+                    image.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
