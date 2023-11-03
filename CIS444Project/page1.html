@@ -121,7 +121,8 @@ function hover(element, url) {
         
         <button onclick="filterImages('T')">T</button> 
         <button onclick="filterImages('CT')">CT</button> 
-        <button id ="sub" style="font-size:14px;">Submit New Smoke</button> 
+        <button id ="sub" style="font-size:14px;">Submit New Smoke</button>
+        <button id = "back">Back</button> 
     </div>
     <div id="image-container">
         <div class="image T">
@@ -179,7 +180,9 @@ function hover(element, url) {
         }
     });
 
-
+    document.getElementById("back").addEventListener('click', function(){
+        window.location.href="index.html";
+    });
 
     </script>
 </body>
