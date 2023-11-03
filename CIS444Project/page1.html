@@ -58,7 +58,48 @@
         }
   
 
+        #submitForm {
+        display: none;
+        padding: 20px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-top: 10px;
+    }
 
+    #submitForm label {
+        display: block;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    input[type="text"],
+    textarea,
+    input[type="file"] {
+        width: 90%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    input[type="submit"] {
+        background-color: #1186bd;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #034a96;
+    }
+    button:hover{
+        background-color: #034a96;
+    }
 
 
     </style>
@@ -80,7 +121,7 @@ function hover(element, url) {
         
         <button onclick="filterImages('T')">T</button> 
         <button onclick="filterImages('CT')">CT</button> 
-        <button style="font-size:14px;">Submit New Smoke</button> 
+        <button id ="sub" style="font-size:14px;">Submit New Smoke</button> 
     </div>
     <div id="image-container">
         <div class="image T">
@@ -101,10 +142,23 @@ function hover(element, url) {
         <div class="image CT">
             <img src="Anubis.webp" alt="CT 3" onmouseover="hover(this, 'https://media0.giphy.com/media/4VRgyzM90w0SoT5BV9/giphy.gif');" onmouseout="unhover(this,'Anubis.webp');">
         </div>
+
+        <div id="submitForm" style="display: none;">
+        <form id="smokeSubmissionForm" action="" method="post" enctype="multipart/form-data">
+            <label for="explanation">Explanation:</label> <br>
+            <textarea id="explanation" name="explanation" rows="8" required></textarea><br>
+            <label for="videoFile">Upload Video:</label>
+            <input type="file" id="videoFile" name="videoFile" required><br>
+            <input type="submit" value="Submit">
+        </form>
     </div>
+    </div>
+
+    
+
     <script>
         function filterImages(category) {
-            const images = document.querySelectorAll('.image');
+            let images = document.querySelectorAll('.image');
             images.forEach(image => {
                 if (category == 'all' || image.classList.contains(category)) {
                     image.style.display = 'block';
@@ -113,6 +167,20 @@ function hover(element, url) {
                 }
             });
         }
+
+
+    document.getElementById('sub').addEventListener('click', function(){
+        let form = document.getElementById('submitForm');
+        if (form.style.display === 'none') {
+            form.style.display = 'block';
+            document.getElementById('toolbar').appendChild(form); 
+        } else {
+            form.style.display = 'none';
+        }
+    });
+
+
+
     </script>
 </body>
 </html>
