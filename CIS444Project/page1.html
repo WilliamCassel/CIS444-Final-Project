@@ -16,11 +16,11 @@
         width: 70%;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between; /* Distribute space between items */
+        justify-content: space-between; 
         }
 
     .image {
-        width: calc(50% - 40px); /* 33.33% width with 20px padding between images */
+        width: calc(50% - 40px); 
         padding: 10px;
         box-sizing: border-box;
         background-color: rgb(83, 80, 80);
@@ -33,14 +33,14 @@
     .overlay-text {
         text-align: center;
         font-family: 'Space Mono', monospace;
-    font-size: 20px;
-    color: white;
-    margin-top: 5%; /* Adjust the margin as needed */
+        font-size: 20px;
+        color: white;
+        margin-top: 5%; 
         }
 
 
     img {
-        max-width: 100%; /* Ensure images scale within their containers */
+        max-width: 100%; 
         height: auto;
         display: block;
         width: 100%; 
@@ -49,8 +49,8 @@
 
 @media (max-width: 768px) {
     .image {
-        width: 100%; /* On smaller screens, make images take up the full row width */
-        margin-right: 0; /* Remove right margin to prevent overflow */
+        width: 100%; 
+        margin-right: 0;
     }
 }
     button{
@@ -131,9 +131,6 @@ function hover(element, url) {
     element.setAttribute('src', url);
   }
   
-  function unhover(element, url) {
-    element.setAttribute('src', url);
-  }
 
 </script>
 <body style="background-color: rgb(83, 80, 80);">
@@ -149,37 +146,37 @@ function hover(element, url) {
     <div id="image-container">
         <h1 data-value="Map Name">Map Name</h1>
         <div class="image T">
-            <img src="Inferno.webp" alt="T 1" onmouseover="hover(this, 'https://media0.giphy.com/media/4VRgyzM90w0SoT5BV9/giphy.gif');" onmouseout="unhover(this,'Inferno.webp');">
+            <img src="Inferno.webp" alt="T 1" onmouseover="hover(this, 'https://media0.giphy.com/media/4VRgyzM90w0SoT5BV9/giphy.gif');" onmouseout="hover(this,'Inferno.webp');">
             <div class="overlay-text">
                 <p>Smoke nickname</p>
             </div>
         </div>
         <div class="image T">
-            <img src="Nuke.webp" alt="T 2" onmouseover="hover(this, 'https://media0.giphy.com/media/4VRgyzM90w0SoT5BV9/giphy.gif');" onmouseout="unhover(this,'Nuke.webp');">
+            <img src="Nuke.webp" alt="T 2" onmouseover="hover(this, 'https://media0.giphy.com/media/4VRgyzM90w0SoT5BV9/giphy.gif');" onmouseout="hover(this,'Nuke.webp');">
             <div class="overlay-text">
                 <p>Smoke nickname</p>
             </div>
         </div>
         <div class="image T">
-            <img src="vertigo.webp" alt="T 3" onmouseover="hover(this, 'https://media0.giphy.com/media/4VRgyzM90w0SoT5BV9/giphy.gif');" onmouseout="unhover(this,'Vertigo.webp');">
+            <img src="vertigo.webp" alt="T 3" onmouseover="hover(this, 'https://media0.giphy.com/media/4VRgyzM90w0SoT5BV9/giphy.gif');" onmouseout="hover(this,'Vertigo.webp');">
             <div class="overlay-text">
                 <p>Smoke nickname</p>
             </div>
         </div>
         <div class="image CT">
-            <img src="Office.webp" alt="CT 1" onmouseover="hover(this, 'https://media0.giphy.com/media/4VRgyzM90w0SoT5BV9/giphy.gif');" onmouseout="unhover(this,'Office.webp');">
+            <img src="Office.webp" alt="CT 1" onmouseover="hover(this, 'https://media0.giphy.com/media/4VRgyzM90w0SoT5BV9/giphy.gif');" onmouseout="hover(this,'Office.webp');">
             <div class="overlay-text">
                 <p>Smoke nickname</p>
             </div>
         </div>
         <div class="image CT">
-            <img src="Ancient.webp" alt="CT 2" onmouseover="hover(this, 'https://media0.giphy.com/media/4VRgyzM90w0SoT5BV9/giphy.gif');" onmouseout="unhover(this,'Ancient.webp');">
+            <img src="Ancient.webp" alt="CT 2" onmouseover="hover(this, 'https://media0.giphy.com/media/4VRgyzM90w0SoT5BV9/giphy.gif');" onmouseout="hover(this,'Ancient.webp');">
             <div class="overlay-text">
                 <p>Smoke nickname</p>
             </div>
         </div>
         <div class="image CT">
-            <img src="Anubis.webp" alt="CT 3" onmouseover="hover(this, 'https://media0.giphy.com/media/4VRgyzM90w0SoT5BV9/giphy.gif');" onmouseout="unhover(this,'Anubis.webp');">
+            <img src="Anubis.webp" alt="CT 3" onmouseover="hover(this, 'https://media0.giphy.com/media/4VRgyzM90w0SoT5BV9/giphy.gif');" onmouseout="hover(this,'Anubis.webp');">
             <div class="overlay-text">
                 <p>Smoke nickname</p>
             </div>
