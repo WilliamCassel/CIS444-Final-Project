@@ -49,14 +49,18 @@
  $pass = "will";
  $pdo = new PDO($connString, $user, $pass);
 
- $sql = "SELECT explanation FROM submissions";
+ $sql = "SELECT * FROM user_submissions";
  $result = $pdo->query($sql);
 
-    while($row=$result->fetch()){
-    echo "<h2> Submission #1 explanation: ";
+ while ($row = $result->fetch()) {
+    echo "<h2>";
+      echo $row['map'];
+      echo "<br>";
     echo $row['explanation'];
     echo "<br/> </h2>";
-    }
+
+   
+}
     $pdo = null;
  
 ?>

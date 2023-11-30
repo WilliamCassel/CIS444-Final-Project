@@ -4,7 +4,7 @@
 
     $expiryTime = time()+60*60*24;
     $name="Map";
-    $value="anubis.php";
+    $value="anubis";
     setcookie($name, $value, $expiryTime);
      ?>
 <head>

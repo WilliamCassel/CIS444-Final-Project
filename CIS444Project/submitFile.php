@@ -18,26 +18,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             $pdo = new PDO($connString, $user, $pass);
 
-            $sql = "INSERT INTO submissions (explanation, video_file) VALUES (?, ?)";
+            $sql = "INSERT INTO user_submissions (map, explanation, file) VALUES (?,?,?)";
             $stmt = $pdo->prepare($sql);
             
             // Bind parameters by reference
-            $stmt->bindParam(1, $explanation);
-            $stmt->bindParam(2, $targetFile);
+	    
+	    $stmt->bindParam(1, $_COOKIE["Map"]);
+            $stmt->bindParam(2, $explanation);
+            $stmt->bindParam(3, $targetFile);
             
             if ($stmt->execute()) {
                 echo "Data inserted successfully.";
-                $pdo = null;
-                $loc = "Location: ". $_COOKIE["Map"];
-                header($loc);
-                exit();
+		$loc = "Location: ". $_COOKIE["Map"].".php";
+		header($loc); //need to make individual submitFile.php's for each map, or maybe use session cookies for the map name and then append .html to the end and we can just do it from one submitFile.php
+		exit();
 	
             } else {
                 echo "Error inserting data.";
-                $pdo = null;
             }
         }
     }
-    
 }
 ?>

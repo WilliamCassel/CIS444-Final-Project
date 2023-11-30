@@ -4,7 +4,7 @@
 
     $expiryTime = time()+60*60*24;
     $name="Map";
-    $value="vertigo.php";
+    $value="vertigo";
     setcookie($name, $value, $expiryTime);
      ?>
 <head>

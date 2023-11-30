@@ -4,7 +4,7 @@
 
     $expiryTime = time()+60*60*24;
     $name="Map";
-    $value="overpass.php";
+    $value="overpass";
     setcookie($name, $value, $expiryTime);
      ?>
 <head>

@@ -4,7 +4,7 @@
 
   $expiryTime = time()+60*60*24;
   $name="Map";
-  $value="mirage.php";
+  $value="mirage";
   setcookie($name, $value, $expiryTime);
    ?>
 <head>
