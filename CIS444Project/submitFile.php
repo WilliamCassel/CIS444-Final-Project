@@ -28,7 +28,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if ($stmt->execute()) {
                 echo "Data inserted successfully.";
                 $pdo = null;
-                header("Location: mirage.html"); //need to make individual submitFile.php's for each map, or maybe use session cookies for the map name and then append .html to the end and we can just do it from one submitFile.php
+                $loc = "Location: ". $_COOKIE["Map"];
+                header($loc);
                 exit();
 	
             } else {

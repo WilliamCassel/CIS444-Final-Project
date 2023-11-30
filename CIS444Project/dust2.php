@@ -4,7 +4,7 @@
 
     $expiryTime = time()+60*60*24;
     $name="Map";
-    $value="ancient.php";
+    $value="dust2.php";
     setcookie($name, $value, $expiryTime);
      ?>
 <head>
@@ -151,21 +151,66 @@ function hover(element, url) {
         <button id = "back">Back</button> 
     </div>
     <div id="image-container">
-        <h1 data-value="Map Name">Ancient</h1>
+        <h1 data-value="Map Name">Dust II</h1>
         <div class="image T">
-            <img src="ancient/AncientHouseT.JPG" alt="T 1" onmouseover="hover(this, 'ancient/AncientHouseTVid.gif');" onmouseout="hover(this,'ancient/AncientHouseT.JPG');">
+            <img src="dust2/Dust2ACrossT.JPG" alt="T 1" onmouseover="hover(this, 'dust2/Dust2ACrossTVid.gif');" onmouseout="hover(this,'dust2/Dust2ACrossT.JPG');">
             <div class="overlay-text">
-                <p>Banana</p>
+                <p>Back Truck</p>
             </div>
         </div>
         <div class="image T">
-            <img src="ancient/AncientShortT.JPG" alt="T 2" onmouseover="hover(this, 'ancient/AncientShortTVid.gif');" onmouseout="hover(this,'ancient/AncientShortT.JPG');">
+            <img src="dust2/Dust2AdoorBoostCT.JPG" alt="T 2" onmouseover="hover(this, 'dust2/Dust2AdoorBoosCtVid.gif');" onmouseout="hover(this,'dust2/Dust2AdoorBoostCT.JPG');">
             <div class="overlay-text">
-                <p>B Smoke</p>
+                <p>Glaive </p>
+            </div>
+        </div>
+        <div class="image T">
+            <img src="dust2/Dust2bDoorT.JPG" alt="T 3" onmouseover="hover(this, 'dust2/Dust2BdoorVid.gif');" onmouseout="hover(this,'dust2/Dust2bDoorT.JPG');">
+            <div class="overlay-text">
+                <p>Outside</p>
+            </div>
+        </div>
+        <div class="image CT">
+            <img src="dust2/Dust2BHallCT.JPG" alt="CT 1" onmouseover="hover(this, 'dust2/DustBHallCTVid.gif');" onmouseout="hover(this,'dust2/Dust2BHallCT.JPG');">
+            <div class="overlay-text">
+                <p>Side Truck</p>
+            </div>
+        </div>
+       
+        <div class="image CT">
+            <img src="dust2/Dust2BWindowT.JPG" alt="CT 1" onmouseover="hover(this, 'dust2/Dust2BdoorVid.gif');" onmouseout="hover(this,'dust2/Dust2BWindowT.JPG');">
+            <div class="overlay-text">
+                <p>Side Truck</p>
             </div>
         </div>
 
-       
+        <div class="image CT">
+            <img src="dust2/Dust2CornerDoorT.JPG" alt="CT 1" onmouseover="hover(this, 'dust2/Dust2AdoorcornerVid.gif');" onmouseout="hover(this,'dust2/Dust2CornerDoorT.JPG');">
+            <div class="overlay-text">
+                <p>Side Truck</p>
+            </div>
+        </div>
+
+        <div class="image CT">
+            <img src="dust2/Dust2CrossCT.JPG" alt="CT 1" onmouseover="hover(this, 'dust2/Dust2CrossCTVid.gif');" onmouseout="hover(this,'dust2/Dust2CrossCT.JPG');">
+            <div class="overlay-text">
+                <p>Side Truck</p>
+            </div>
+        </div>
+
+        <div class="image CT">
+            <img src="dust2/Dust2ctSpawnT.JPG" alt="CT 1" onmouseover="hover(this, 'dust2/Dust2ctSpawnTVid.gif');" onmouseout="hover(this,'dust2/Dust2ctSpawnT.JPG');">
+            <div class="overlay-text">
+                <p>Side Truck</p>
+            </div>
+        </div>
+
+        <div class="image CT">
+            <img src="dust2/Dust2XboxT.JPG" alt="CT 1" onmouseover="hover(this, 'dust2/Dust2XboxVid.gif');" onmouseout="hover(this,'dust2/Dust2XboxT.JPG');">
+            <div class="overlay-text">
+                <p>Side Truck</p>
+            </div>
+        </div>
 
         <div id="submitForm" style="display: none;">
         <form id="smokeSubmissionForm" action="" method="post">

@@ -4,7 +4,7 @@
 
     $expiryTime = time()+60*60*24;
     $name="Map";
-    $value="ancient.php";
+    $value="vertigo.php";
     setcookie($name, $value, $expiryTime);
      ?>
 <head>
@@ -151,20 +151,31 @@ function hover(element, url) {
         <button id = "back">Back</button> 
     </div>
     <div id="image-container">
-        <h1 data-value="Map Name">Ancient</h1>
+        <h1 data-value="Map Name">Vertigo</h1>
         <div class="image T">
-            <img src="ancient/AncientHouseT.JPG" alt="T 1" onmouseover="hover(this, 'ancient/AncientHouseTVid.gif');" onmouseout="hover(this,'ancient/AncientHouseT.JPG');">
+            <img src="vertigo/VertigoGenT.JPG" alt="T 1" onmouseover="hover(this, 'vertigo/VertigobGenTVid.gif');" onmouseout="hover(this,'vertigo/VertigoGenT.JPG');">
             <div class="overlay-text">
-                <p>Banana</p>
+                <p>Back Truck</p>
             </div>
         </div>
         <div class="image T">
-            <img src="ancient/AncientShortT.JPG" alt="T 2" onmouseover="hover(this, 'ancient/AncientShortTVid.gif');" onmouseout="hover(this,'ancient/AncientShortT.JPG');">
+            <img src="vertigo/VertigoRightaT.JPG" alt="T 2" onmouseover="hover(this, 'vertigo/VertigoRightaTVid.gif');" onmouseout="hover(this,'vertigo/VertigoRightaT.JPG');">
             <div class="overlay-text">
-                <p>B Smoke</p>
+                <p>Glaive </p>
             </div>
         </div>
-
+        <div class="image T">
+            <img src="vertigo/VertigoRampaT.JPG" alt="T 3" onmouseover="hover(this, 'vertigo/VertigoRampaTVid.gif');" onmouseout="hover(this,'vertigo/VertigoRampaT.JPG');">
+            <div class="overlay-text">
+                <p>Outside</p>
+            </div>
+        </div>
+        <div class="image CT">
+            <img src="vertigo/VertigoLeftAT.JPG" alt="CT 1" onmouseover="hover(this, 'vertigo/VertigoLeftAVid.gif');" onmouseout="hover(this,'vertigo/VertigoLeftAT.JPG');">
+            <div class="overlay-text">
+                <p>Side Truck</p>
+            </div>
+        </div>
        
 
         <div id="submitForm" style="display: none;">

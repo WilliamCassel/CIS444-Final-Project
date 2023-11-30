@@ -4,7 +4,7 @@
 
     $expiryTime = time()+60*60*24;
     $name="Map";
-    $value="ancient.php";
+    $value="inferno.php";
     setcookie($name, $value, $expiryTime);
      ?>
 <head>
@@ -151,20 +151,31 @@ function hover(element, url) {
         <button id = "back">Back</button> 
     </div>
     <div id="image-container">
-        <h1 data-value="Map Name">Ancient</h1>
+        <h1 data-value="Map Name">Inferno</h1>
         <div class="image T">
-            <img src="ancient/AncientHouseT.JPG" alt="T 1" onmouseover="hover(this, 'ancient/AncientHouseTVid.gif');" onmouseout="hover(this,'ancient/AncientHouseT.JPG');">
+            <img src="inferno/InfernoBannaCT.JPG" alt="T 1" onmouseover="hover(this, 'inferno/InfernoBannaCtVid.gif');" onmouseout="hover(this,'inferno/InfernoBannaCT.JPG');">
             <div class="overlay-text">
                 <p>Banana</p>
             </div>
         </div>
         <div class="image T">
-            <img src="ancient/AncientShortT.JPG" alt="T 2" onmouseover="hover(this, 'ancient/AncientShortTVid.gif');" onmouseout="hover(this,'ancient/AncientShortT.JPG');">
+            <img src="inferno/InfernoCtBSmokeCT.JPG" alt="T 2" onmouseover="hover(this, 'inferno/InferoCtBSmokeTVid.gif');" onmouseout="hover(this,'inferno/InfernoCtBSmokeCT.JPG');">
             <div class="overlay-text">
                 <p>B Smoke</p>
             </div>
         </div>
-
+        <div class="image T">
+            <img src="inferno/InfernoHalfWallbT.JPG" alt="T 3" onmouseover="hover(this, 'inferno/infernoHalfWallTVid.gif');" onmouseout="hover(this,'inferno/InfernoHalfWallbT.JPG');">
+            <div class="overlay-text">
+                <p>Half Wall</p>
+            </div>
+        </div>
+        <div class="image CT">
+            <img src="inferno/InfernoMotoT.JPG" alt="CT 1" onmouseover="hover(this, 'inferno/InfernoMotoTVid.gif');" onmouseout="hover(this,'inferno/InfernoMotoT.JPG');">
+            <div class="overlay-text">
+                <p>Moto</p>
+            </div>
+        </div>
        
 
         <div id="submitForm" style="display: none;">

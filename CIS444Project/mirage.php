@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-    <?php
+  <?php
 
-    $expiryTime = time()+60*60*24;
-    $name="Map";
-    $value="ancient.php";
-    setcookie($name, $value, $expiryTime);
-     ?>
+  $expiryTime = time()+60*60*24;
+  $name="Map";
+  $value="mirage.php";
+  setcookie($name, $value, $expiryTime);
+   ?>
 <head>
     <style>
     body {
@@ -74,7 +74,7 @@
         }
   
 
-        #submitForm {
+    #submitForm {
         display: none;
         padding: 20px;
         background-color: #fff;
@@ -117,18 +117,18 @@
         background-color: #034a96;
     }
     h1 {
-            width: 100%;
-            font-family: 'Space Mono', monospace;
-            font-size: 45px;
-            color: #977c84;
-            text-align: center;
-            background-color: #12012e;
-            border-radius: clamp(0.25rem, 0.75vw, 1rem);
-            margin-top: 20px; 
-            margin-bottom: 20px; 
-            margin-left: auto;
-            margin-right: auto;
-            padding:10px;
+        width: 100%;
+        font-family: 'Space Mono', monospace;
+        font-size: 45px;
+        color: #977c84;
+        text-align: center;
+        background-color: #12012e;
+        border-radius: clamp(0.25rem, 0.75vw, 1rem);
+        margin-top: 20px; 
+        margin-bottom: 20px; 
+        margin-left: auto;
+        margin-right: auto;
+        padding:10px;
     }
 
     </style>
@@ -148,27 +148,52 @@ function hover(element, url) {
         <button onclick="filterImages('T')">T</button> 
         <button onclick="filterImages('CT')">CT</button> 
         <button id ="sub" style="font-size:14px;">Submit New Smoke</button>
+	<form>
+	  <button id = "seeSub" formaction="seeSubmissions.php">See Submissions</button>
+	  </form>
         <button id = "back">Back</button> 
     </div>
     <div id="image-container">
-        <h1 data-value="Map Name">Ancient</h1>
+        <h1 data-value="Map Name">Mirage</h1>
         <div class="image T">
-            <img src="ancient/AncientHouseT.JPG" alt="T 1" onmouseover="hover(this, 'ancient/AncientHouseTVid.gif');" onmouseout="hover(this,'ancient/AncientHouseT.JPG');">
+            <img src="mirage/mirage_window.png" alt="T 1" onmouseover="hover(this, 'mirage/mirage_windowVid.mov');" onmouseout="hover(this,'mirage/mirage_window.png');">
             <div class="overlay-text">
-                <p>Banana</p>
+                <p>Window</p>
             </div>
         </div>
         <div class="image T">
-            <img src="ancient/AncientShortT.JPG" alt="T 2" onmouseover="hover(this, 'ancient/AncientShortTVid.gif');" onmouseout="hover(this,'ancient/AncientShortT.JPG');">
+            <img src="mirage/mirage_ct.png" alt="T 2" onmouseover="hover(this, 'mirage/mirage_ctVid.mov');" onmouseout="hover(this,'mirage/mirage_ct.png');">
             <div class="overlay-text">
-                <p>B Smoke</p>
+                <p>CT</p>
             </div>
         </div>
-
-       
+        <div class="image T">
+            <img src="mirage/mirage_stairs.png" alt="T 3" onmouseover="hover(this, 'mirage/mirage_stairsVid.mov');" onmouseout="hover(this,'mirage/mirage_stairs.png');">
+            <div class="overlay-text">
+                <p>Stairs</p>
+            </div>
+        </div>
+        <div class="image CT">
+            <img src="mirage/mirageJungle.png" alt="CT 1" onmouseover="hover(this, 'mirage/mirage_jungleVid.mov');" onmouseout="hover(this,'mirage/mirageJungle.png');">
+            <div class="overlay-text">
+                <p>Jungle</p>
+            </div>
+        </div>
+        <div class="image CT">
+            <img src="mirage/mirage_marketWindow.png" alt="CT 2" onmouseover="hover(this, 'mirage/mirage_marketWindowVid.mov');" onmouseout="hover(this,'mirage/mirage_marketWindow.png');">
+            <div class="overlay-text">
+                <p>Market Window</p>
+            </div>
+        </div>
+        <div class="image CT">
+            <img src="mirage/mirage_marketDoor.png" alt="CT 3" onmouseover="hover(this, 'mirage/mirage_marketDoorVid.mov');" onmouseout="hover(this,'mirage/mirage_marketDoor.png');">
+            <div class="overlay-text">
+                <p>Market Door</p>
+            </div>
+        </div>
 
         <div id="submitForm" style="display: none;">
-        <form id="smokeSubmissionForm" action="" method="post">
+        <form id="smokeSubmissionForm" action="submitFile.php" method="post" enctype="multipart/form-data">
             <label for="explanation">Explanation:</label> <br>
             <textarea id="explanation" name="explanation" rows="8" required></textarea><br>
             <label for="videoFile">Upload Video:</label>
