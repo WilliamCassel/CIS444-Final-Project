@@ -130,6 +130,20 @@
             margin-right: auto;
             padding:10px;
     }
+    h2 {    
+            width: 43%;
+            font-family: 'Space Mono', monospace;
+            font-size: 20px;
+            color: #977c84;
+            text-align: center;
+            background-color: #12012e;
+            border-radius: clamp(0.25rem, 0.75vw, 1rem);
+            margin-top: 20px; 
+            margin-bottom: 20px; 
+           
+            padding:10px;
+            
+    }
 
     </style>
 </head>
@@ -148,6 +162,9 @@ function hover(element, url) {
         <button onclick="filterImages('T')">T</button> 
         <button onclick="filterImages('CT')">CT</button> 
         <button id ="sub" style="font-size:14px;">Submit New Smoke</button>
+        <form>
+	  <button style="font-size:15px;" id = "seeSub" formaction="seeSubmissions.php">See Submissions</button>
+	  </form>
         <button id = "back">Back</button> 
     </div>
     <div id="image-container">

@@ -27,11 +27,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $stmt->bindParam(2, $explanation);
             $stmt->bindParam(3, $targetFile);
             
-            if ($stmt->execute()) {
-                echo "Data inserted successfully.";
-		$loc = "Location: ". $_COOKIE["Map"].".php";
-		header($loc); //need to make individual submitFile.php's for each map, or maybe use session cookies for the map name and then append .html to the end and we can just do it from one submitFile.php
-		exit();
+        if ($stmt->execute()) {
+            echo "Data inserted successfully.";
+            $loc = "Location: ". $_COOKIE["Map"].".php";
+            header($loc); 
+            exit();
 	
             } else {
                 echo "Error inserting data.";
