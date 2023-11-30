@@ -4,8 +4,21 @@
 <head>
     <title>CS Smokes</title>
     <style>
-    
-       
+     button{
+        width:150px; 
+        height:45px; 
+        border-color:#1186bd;
+        border-radius:10%;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; 
+        background-color:#1186bd; 
+        font-size:20px;
+        font-family: 'Space Mono', monospace; 
+        color:white;
+        margin-bottom:3%;
+        }
+           button:hover{
+        background-color: #034a96;
+    }
         h1 {
             width: 60%;
             font-family: 'Space Mono', monospace;
@@ -49,20 +62,40 @@
  $pass = "will";
  $pdo = new PDO($connString, $user, $pass);
 
- $sql = "SELECT * FROM user_submissions";
- $result = $pdo->query($sql);
-
- while ($row = $result->fetch()) {
+ $sql = "SELECT * FROM user_submissions WHERE map = ?";
+ $stmt = $pdo->prepare($sql);
+ $stmt->bindParam(1, $_COOKIE["Map"]);
+     $stmt->execute();
+  // $rowCount = $stmt->rowCount();
+ //echo "Number of rows returned: " . $rowCount;
+     echo " <button id = 'back'>Back</button> ";
+   // echo $_COOKIE["Map"];
+  while ($row = $stmt->fetch()) {
     echo "<h2>";
-      echo $row['map'];
-      echo "<br>";
+    echo $row['map'];
+    echo "<br>";
     echo $row['explanation'];
     echo "<br/> </h2>";
-
-   
-}
+ 
+    
+ }
     $pdo = null;
  
-?>
+    ?>
+    <script>
+
+function getCookie(name) {
+    function escape(s) { return s.replace(/([.*+?\^$(){}|\[\]\/\\])/g, '\\$1'); }
+    var match = document.cookie.match(RegExp('(?:^|;\\s*)' + escape(name) + '=([^;]*)'));
+    return match ? match[1] : null;
+}
+      
+  document.getElementById("back").addEventListener('click', function(){
+      let map = getCookie("Map");
+      let url = map +".php";
+        window.location.href=url;
+       });
+  </script>
+    
 </body>
 </html>
