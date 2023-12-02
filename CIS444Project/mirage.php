@@ -169,37 +169,37 @@ function hover(element, url) {
     <div id="image-container">
         <h1 data-value="Map Name">Mirage</h1>
         <div class="image T">
-            <img src="mirage/mirage_window.png" alt="T 1" onmouseover="hover(this, 'mirage/mirage_windowVid.mov');" onmouseout="hover(this,'mirage/mirage_window.png');">
+            <img src="mirage/mirage_window.png" alt="T 1" onmouseover="hover(this, 'mirage/mirage_windowVid.gif');" onmouseout="hover(this,'mirage/mirage_window.png');">
             <div class="overlay-text">
                 <p>Window</p>
             </div>
         </div>
         <div class="image T">
-            <img src="mirage/mirage_ct.png" alt="T 2" onmouseover="hover(this, 'mirage/mirage_ctVid.mov');" onmouseout="hover(this,'mirage/mirage_ct.png');">
+            <img src="mirage/mirage_ct.png" alt="T 2" onmouseover="hover(this, 'mirage/mirage_ctVid.gif');" onmouseout="hover(this,'mirage/mirage_ct.png');">
             <div class="overlay-text">
                 <p>CT</p>
             </div>
         </div>
         <div class="image T">
-            <img src="mirage/mirage_stairs.png" alt="T 3" onmouseover="hover(this, 'mirage/mirage_stairsVid.mov');" onmouseout="hover(this,'mirage/mirage_stairs.png');">
+            <img src="mirage/mirage_stairs.png" alt="T 3" onmouseover="hover(this, 'mirage/mirage_stairsVid.gif');" onmouseout="hover(this,'mirage/mirage_stairs.png');">
             <div class="overlay-text">
                 <p>Stairs</p>
             </div>
         </div>
         <div class="image CT">
-            <img src="mirage/mirageJungle.png" alt="CT 1" onmouseover="hover(this, 'mirage/mirage_jungleVid.mov');" onmouseout="hover(this,'mirage/mirageJungle.png');">
+            <img src="mirage/mirageJungle.png" alt="CT 1" onmouseover="hover(this, 'mirage/mirage_jungleVid.gif');" onmouseout="hover(this,'mirage/mirageJungle.png');">
             <div class="overlay-text">
                 <p>Jungle</p>
             </div>
         </div>
         <div class="image CT">
-            <img src="mirage/mirage_marketWindow.png" alt="CT 2" onmouseover="hover(this, 'mirage/mirage_marketWindowVid.mov');" onmouseout="hover(this,'mirage/mirage_marketWindow.png');">
+            <img src="mirage/mirage_marketWindow.png" alt="CT 2" onmouseover="hover(this, 'mirage/mirage_marketWindowVid.gif');" onmouseout="hover(this,'mirage/mirage_marketWindow.png');">
             <div class="overlay-text">
                 <p>Market Window</p>
             </div>
         </div>
         <div class="image CT">
-            <img src="mirage/mirage_marketDoor.png" alt="CT 3" onmouseover="hover(this, 'mirage/mirage_marketDoorVid.mov');" onmouseout="hover(this,'mirage/mirage_marketDoor.png');">
+            <img src="mirage/mirage_marketDoor.png" alt="CT 3" onmouseover="hover(this, 'mirage/mirage_marketDoorVid.gif');" onmouseout="hover(this,'mirage/mirage_marketDoor.png');">
             <div class="overlay-text">
                 <p>Market Door</p>
             </div>
